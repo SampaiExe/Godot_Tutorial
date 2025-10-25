@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://n6u4w7paxcse"]
+
+[ext_resource type="Texture2D" uid="uid://svtrtqsx3l0t" path="res://icon.svg" id="1_rpqav"]
+
+[node name="Player" type="Node2D"]
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-2.5, 74)
+scale = Vector2(1.6015625, 1)
+texture = ExtResource("1_rpqav")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_rpqav")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(-52, 172)
+scale = Vector2(0.3046875, 1)
+texture = ExtResource("1_rpqav")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(45, 172)
+scale = Vector2(0.3046875, 1)
+texture = ExtResource("1_rpqav")
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(181.75, 66)
+scale = Vector2(1.4570313, 0.2421875)
+texture = ExtResource("1_rpqav")
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+position = Vector2(-185.99997, 66)
+scale = Vector2(1.4570313, 0.2421875)
+texture = ExtResource("1_rpqav")
