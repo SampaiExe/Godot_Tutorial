@@ -2,8 +2,16 @@ extends Node
 
 var fun = false
 var im_not_very_creative = true
-
+var b2 = true
+var b1 = false
 func _ready() -> void:
+	
+	if (b1):
+		print("it's true")
+	elif (b2):
+		print("b2 is true")
+	else:
+		print("it's false")
 	
 	#region Example 1
 	if (fun):
@@ -27,23 +35,26 @@ func _ready() -> void:
 		#print("n is greater than six")
 	##region
 	
-	##region Match-Statement
-	#var Witnessed = "whatever"
-	#match Witnessed:
-		#"Weapon and Blood and Insanity":
-			#pass #code logic goes here
-		#"Weapon and Blood":
-			#pass
-		#"Weapon and Insanity":
-			#pass
-		#"Blood and Insanity":
-			#pass
-		#"Weapon":
-			#pass
-		#"Blood":
-			#pass
-		#"Insanity":
-			#pass
-		#_:
-			#print("no matches")
-	##region
+	#region Match-Statement
+	var Witnessed = "whatever"
+	match Witnessed:
+		"Weapon and Blood and Insanity":
+			pass #code logic goes here
+		"Weapon and Blood":
+			pass
+		"Weapon and Insanity":
+			pass
+		"Blood and Insanity":
+			pass
+		"Weapon":
+			pass
+		"Blood":
+			pass
+		"Insanity":
+			pass
+		_:
+			print("no matches")
+	#region
+
+		
+			

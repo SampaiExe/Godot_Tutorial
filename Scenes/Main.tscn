@@ -6,6 +6,9 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="var_1" type="Sprite2D" parent="."]
-script = ExtResource("1_r150o")
 
 [node name="Player" parent="." instance=ExtResource("2_idj7w")]
+position = Vector2(2, 0)
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("1_r150o")

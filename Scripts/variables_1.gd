@@ -26,8 +26,8 @@ func _ready() -> void:
 	#We can of course also do aritmetics with variables
 	var add = 1+2
 	print(add)
-	var test = is_equal_approx((7.2 + 3.4), 10.6)  
-	print("test:" + str(test))
+	#var test = is_equal_approx((7.2 + 3.4), 10.6)  
+	#print("test:" + str(test))
 	#We can make variables the product of other variables
 	add = i+f #after a variable has been asigned and we want to give it a new value, we don't use var again
 	print(add)
@@ -37,6 +37,7 @@ func _ready() -> void:
 	#f2 = "I don't want to be a string"
 	
 	add += 12
+	
 	print(add)
 	
 	

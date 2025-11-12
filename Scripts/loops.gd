@@ -7,8 +7,11 @@ func _ready() -> void:
 	#for x in 15:
 		#print(x)
 	#
-	#for x in "Hello World":
-		#print(x)
+	
+		#if (x == "l"):
+			#pass
+		#else: 
+			#print(x)
 ##region
 
 ##region Array
@@ -24,29 +27,31 @@ func _ready() -> void:
 	#
 	#
 	#var y: Array[float] = [] #we can also strong type arrays
-	#y.append("12")
+	##y.append("12")
 	#
 	#print(y)
 	#print(x)
+	#
+	#for _token in x:
+		#print(_token)
 	
-	#for _x in x:
-		#print(_x)
-		
+	#var sum: int
 	#for x in [52, 127, 40]:
-		#print(x)
-##region
-	
-	
+		#sum += x
+		#print(sum)
+#region
+	#
+	#
 	var counter = 0
-	
 	#while(counter <= 10):
 		#counter += 1
 		#print(counter)	
-	
+	#
 	while(counter <= 10):
 		if(counter == 5): 
-			counter += 1 			#What happens if we delete this line?
+			pass
+			#counter += 1 			#What happens if we delete this line?
 			#continue				#The continue statement jumps back to the top of the loop
-			break					#The break statement exits the room
+			#break					#The break statement exits the room
 		print(counter)	
 		counter += 1
