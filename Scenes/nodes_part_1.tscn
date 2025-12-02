@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cu6bjfcv4lqq"]
+
+[node name="nodesPart1" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D/Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Sprite2D/Area2D"]
