@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=3 uid="uid://b512hidtdve4b"]
+
+[ext_resource type="Script" uid="uid://55omo2d6epph" path="res://Scenes/demo_scene.gd" id="1_2ih46"]
+[ext_resource type="Texture2D" uid="uid://svtrtqsx3l0t" path="res://icon.svg" id="1_f5mse"]
+[ext_resource type="PackedScene" uid="uid://n6u4w7paxcse" path="res://Scenes/Player.tscn" id="2_ck0va"]
+[ext_resource type="Script" uid="uid://n3oert87vohk" path="res://Scenes/wall_4.gd" id="3_51fmb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ck0va"]
+size = Vector2(40, 643)
+
+[node name="DemoScene" type="Node2D"]
+script = ExtResource("1_2ih46")
+
+[node name="Wall" type="StaticBody2D" parent="."]
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall"]
+position = Vector2(22, 321.5)
+scale = Vector2(0.3125, 5.0390625)
+texture = ExtResource("1_f5mse")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2(23, 322.5)
+shape = SubResource("RectangleShape2D_ck0va")
+
+[node name="Wall3" type="StaticBody2D" parent="."]
+position = Vector2(1167, -4)
+rotation = 1.5707964
+scale = Vector2(1, 1.8399999)
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall3"]
+position = Vector2(22, 321.5)
+scale = Vector2(0.3125, 5.0390625)
+texture = ExtResource("1_f5mse")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall3"]
+position = Vector2(23, 322.5)
+shape = SubResource("RectangleShape2D_ck0va")
+
+[node name="Wall5" type="StaticBody2D" parent="."]
+position = Vector2(1167.0001, 605)
+rotation = 1.5707964
+scale = Vector2(1, 1.8399999)
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall5"]
+position = Vector2(22, 321.5)
+scale = Vector2(0.3125, 5.0390625)
+texture = ExtResource("1_f5mse")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall5"]
+position = Vector2(23, 322.5)
+shape = SubResource("RectangleShape2D_ck0va")
+
+[node name="Wall4" type="StaticBody2D" parent="."]
+position = Vector2(1110, 0)
+collision_mask = 2
+input_pickable = true
+script = ExtResource("3_51fmb")
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall4"]
+position = Vector2(22, 321.5)
+scale = Vector2(0.3125, 5.0390625)
+texture = ExtResource("1_f5mse")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall4"]
+position = Vector2(23, 322.5)
+shape = SubResource("RectangleShape2D_ck0va")
+
+[node name="Player" parent="." instance=ExtResource("2_ck0va")]
+position = Vector2(555, 312)
+
+[node name="TestTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="timeout" from="TestTimer" to="." method="_on_test_timer_timeout"]
